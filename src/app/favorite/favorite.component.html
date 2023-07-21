@@ -1,6 +1,8 @@
 <i
   class="bi"
-  [class.bi-star-fill]="isFavorite"
-  [class.bi-star]="!isFavorite"
+  [ngClass]="{
+    'bi-star': !isFavorite,
+    'bi-star-fill': isFavorite
+  }"
   (click)="onClick()"
 ></i>
